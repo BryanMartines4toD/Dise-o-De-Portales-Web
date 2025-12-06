@@ -1,62 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
+    <title>Formulario de contacto</title>
 </head>
 <body>
-    <label for="Nombre">Nombre</label>
-<input type="text" id="Nombre" required>
 
-<br>
-<label for="Direccion">Dirección</label>
-<input type="text" id="Direccion" required>
+    <h1>Formulario de contacto</h1>
 
-<br>
-<label for="Edad">Edad</label>
-<input type="number" id="Edad" required>
+    <form id="contactForm" novalidate>
+        <div>
+            <label for="name">Nombre</label>
+            <input id="name" name="name" type="text" placeholder="Tu nombre" required />
+        </div>
 
-<br>
-<label for="Genero">Genero:</label>
-<select id="Genero" name="Genero">
-    <option value="">Seleccione...</option>
-    <option value="masculino">Masculino</option>
-    <option value="femenino">Femenino</option>
-</select>
+        <div>
+            <label for="direccion">Dirección</label>
+            <textarea id="direccion" name="direccion" placeholder="Calle, ciudad, país"></textarea>
+        </div>
 
+        <div>
+            <label for="edad">Edad</label>
+            <input id="edad" name="edad" type="number" min="0" max="130" placeholder="Ej: 30" />
+        </div>
 
-<br>
-<label for="Pasatiempo">Pasatiempo</label>
-<input type="text" id="Pasatiempo" required>
+        <div>
+            <label for="hora_practica">Hora (pra time)</label>
+            <input id="hora_practica" name="pra_time" type="time" />
+        </div>
 
-<br>
-<label for="Carrera">Carrera</label>
+        <div>
+            <label>Género</label>
+            <div>
+                <label><input type="radio" name="genero" value="masculino" checked /> Masculino</label>
+                <label><input type="radio" name="genero" value="femenino" /> Femenino</label>
+                <label><input type="radio" name="genero" value="otro" /> Otro</label>
+            </div>
+        </div>
 
-<br>
-<input type="radio" name="Carrera" id="Informatica" value="Informatica">
-<label for="Informatica">Informática</label>
+        <div>
+            <label for="select_interes">Seleccione una opción</label>
+            <select id="select_interes" name="interes">
+                <option value="">-- Elija --</option>
+                <option value="info">Solicitar información</option>
+                <option value="soporte">Soporte técnico</option>
+                <option value="ventas">Ventas</option>
+            </select>
+        </div>
 
-<br>
-<input type="radio" name="Carrera" id="Enfermeria" value="Enfermeria">
-<label for="Enfermeria">Enfermería</label>
+        <div>
+            <label for="correo">Correo electrónico</label>
+            <input id="correo" name="correo" type="email" placeholder="tu@ejemplo.com" required />
+        </div>
 
-<br>
-<input type="radio" name="Carrera" id="Gastronomia" value="Gastronomia">
-<label for="Gastronomia">Gastronomía</label>
+        <div>
+            <input id="checkvoxx" name="checkvoxx" type="checkbox" />
+            <label for="checkvoxx">Acepto recibir notificaciones (checkvoxx)</label>
+        </div>
 
-<br>
-<input type="radio" name="Carrera" id="Electricidad" value="Electricidad">
-<label for="Electricidad">Electricidad</label>
+        <div>
+            <button type="submit">Enviar</button>
+            <button type="button" id="limpiar">Limpiar</button>
+        </div>
+    </form>
 
-<br>
-<input type="radio" name="Carrera" id="Contabilidad" value="Contabilidad">
-<label for="Contabilidad">Contabilidad</label>
+    <p>The work sometime</p>
 
-<br>
-<label for="Correo">Correo</label>
-<input type="email" id="Correo" required>
-<br>
-<button>Enviar</button>
 </body>
 </html>
